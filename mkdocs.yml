@@ -8,6 +8,7 @@ theme:
 nav:
   - Home: index.md
   - System: system.md
+  - Jobs: jobs.md
   - Slurm operations: slurm_operations.md
   - Slurm installation: slurm_installation.md
 
@@ -69,15 +70,15 @@ plugins:
         en:
           name: English
           build: true
-          site_name: "Clowder Document"
+          site_name: "Clawster Document"
         zh:
           name: Chinese
           build: true
-          site_name: "Clowder 文档"
+          site_name: "Clawster 文档"
       nav_translations:
         zh:
-          Topic1: Sujet1
-          Topic2: Sujet2
+          Jobs: 作业
+          System: 系统
   - git-revision-date-localized:
       fallback_to_build_date: true
 
