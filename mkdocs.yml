@@ -1,3 +1,78 @@
-site_name: My Docs
+site_name: Clawster Document
+
 theme:
   name: material
+  language: en
+nav:
+  - Home: index.md
+  - System: system.md
+  - Slurm operations: slurm_operations.md
+  - Slurm installation: slurm_installation.md
+
+
+markdown_extensions:
+    - attr_list
+    - md_in_html
+    - admonition
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.superfences 
+    - footnotes
+    - def_list
+    - meta
+    - toc:
+        permalink: true
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde
+
+extra:
+  alternate:
+    - name: English
+      link: ./en/
+      lang: en
+    - name: Chinese
+      link: ./zh/
+      lang: zh
+plugins:
+  - search:
+      lang: en
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
+      fallback_to_empty: false
+  - i18n:
+      default_language: !ENV [DEFAULT_LANGUAGE, "en"]
+      default_language_only: !ENV [DEFAULT_LANGUAGE_ONLY, false]
+      docs_structure: suffix
+      languages:
+        default:
+          name: Default (en)
+          build: true
+        en:
+          name: English
+          build: true
+          site_name: "Clowder Document"
+        zh:
+          name: Chinese
+          build: true
+          site_name: "Clowder 文档"
+      nav_translations:
+        zh:
+          Topic1: Sujet1
+          Topic2: Sujet2
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+
