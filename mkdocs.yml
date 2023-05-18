@@ -1,8 +1,10 @@
 site_name: Clawster Document
-
+site_author: 'Chufan Chen'
+repo_name: 'catwork-llc/clawster'
+repo_url: 'https://github.com/Catwork-LLC/clawster'
 theme:
   name: material
-  language: en
+  custom_dir: 'docs/theme-override/'
 nav:
   - Home: index.md
   - System: system.md
@@ -39,6 +41,7 @@ markdown_extensions:
     - pymdownx.tilde
 
 extra:
+  pagetime: 'on'
   alternate:
     - name: English
       link: ./en/
@@ -48,7 +51,9 @@ extra:
       lang: zh
 plugins:
   - search:
-      lang: en
+      lang: 
+        - en
+        - zh
   - git-authors:
       show_contribution: true
       show_line_count: true
