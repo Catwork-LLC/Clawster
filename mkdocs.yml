@@ -11,6 +11,7 @@ nav:
   - Jobs: jobs.md
   - Container: container.md
   - Module: module.md
+  - Example: example.md
   - Slurm operations: slurm_operations.md
   - Slurm installation: slurm_installation.md
 
