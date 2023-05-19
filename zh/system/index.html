@@ -1,0 +1,1433 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Chufan Chen">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../jobs/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.13">
+    
+    
+      
+        <title>系统 - Clawster 文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../" title="Clawster 文档" class="md-header__button md-logo" aria-label="Clawster 文档" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Clawster 文档
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              系统
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="选择当前语言">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../en/system/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="zh" class="md-select__link">
+                    Chinese
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Catwork-LLC/clawster" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    catwork-llc/clawster
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Clawster 文档" class="md-nav__button md-logo" aria-label="Clawster 文档" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Clawster 文档
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Catwork-LLC/clawster" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    catwork-llc/clawster
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          系统
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        系统
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基本概念
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hpc" class="md-nav__link">
+    HPC集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvidia-dgx-superpod" class="md-nav__link">
+    NVIDIA DGX SuperPOD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deepops" class="md-nav__link">
+    DeepOps
+  </a>
+  
+    <nav class="md-nav" aria-label="DeepOps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scheduler" class="md-nav__link">
+    Scheduler
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kubernetes" class="md-nav__link">
+    Kubernetes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slurm" class="md-nav__link">
+    Slurm
+  </a>
+  
+    <nav class="md-nav" aria-label="Slurm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slurm_1" class="md-nav__link">
+    Slurm 概览
+  </a>
+  
+    <nav class="md-nav" aria-label="Slurm 概览">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sinfo" class="md-nav__link">
+    sinfo 查看集群状态
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squeue" class="md-nav__link">
+    squeue查看作业信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sbatch" class="md-nav__link">
+    sbatch作业提交
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srun-salloc" class="md-nav__link">
+    srun 和 salloc 交互式作业
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scontrol" class="md-nav__link">
+    scontrol: 查看和修改作业参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sacct" class="md-nav__link">
+    sacct查看作业记录
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slurm_2" class="md-nav__link">
+    Slurm环境变量
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ansible" class="md-nav__link">
+    Ansible
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobs/" class="md-nav__link">
+        作业
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../container/" class="md-nav__link">
+        容器
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module/" class="md-nav__link">
+        软件模块
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../example/" class="md-nav__link">
+        Example
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slurm_operations/" class="md-nav__link">
+        Slurm operations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slurm_installation/" class="md-nav__link">
+        Slurm installation
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基本概念
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hpc" class="md-nav__link">
+    HPC集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvidia-dgx-superpod" class="md-nav__link">
+    NVIDIA DGX SuperPOD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deepops" class="md-nav__link">
+    DeepOps
+  </a>
+  
+    <nav class="md-nav" aria-label="DeepOps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scheduler" class="md-nav__link">
+    Scheduler
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kubernetes" class="md-nav__link">
+    Kubernetes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slurm" class="md-nav__link">
+    Slurm
+  </a>
+  
+    <nav class="md-nav" aria-label="Slurm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slurm_1" class="md-nav__link">
+    Slurm 概览
+  </a>
+  
+    <nav class="md-nav" aria-label="Slurm 概览">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sinfo" class="md-nav__link">
+    sinfo 查看集群状态
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squeue" class="md-nav__link">
+    squeue查看作业信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sbatch" class="md-nav__link">
+    sbatch作业提交
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#srun-salloc" class="md-nav__link">
+    srun 和 salloc 交互式作业
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scontrol" class="md-nav__link">
+    scontrol: 查看和修改作业参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sacct" class="md-nav__link">
+    sacct查看作业记录
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slurm_2" class="md-nav__link">
+    Slurm环境变量
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ansible" class="md-nav__link">
+    Ansible
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+  
+  
+
+
+<h1 id="_1">系统<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">基本概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>资源</p>
+<ul>
+<li>作业运行过程中使用的可量化实体都是资源</li>
+<li>包括硬件资源（节点、内存、CPU 、GPU等）和软件资源（ License ）</li>
+</ul>
+<p>集群</p>
+<ul>
+<li>包含计算、存储、网络等各种资源实体且彼此联系的资源集合；</li>
+<li>在物理上，一般由计算处理、互联通信、I/O 存储、操作系统、编译器、
+运行环境、开发工具等多个软硬件子系统组成；</li>
+<li>节点是集群的基本组成单位，从角色上一般可以划分为管理节点、登陆节
+点、计算节点、存储节点等。</li>
+</ul>
+<p>作业</p>
+<ul>
+<li>物理构成，一组关联的资源分配请求，以及一组关联的处理过程；</li>
+<li>交互方式，可以分为交互式作业和非交互式作业；</li>
+<li>资源使用，可以分为串行作业和并行作业；</li>
+</ul>
+<p>分区</p>
+<ul>
+<li>带名称的作业容器；</li>
+<li>用户访问控制；</li>
+<li>资源使用限制；</li>
+</ul>
+<p>作业调度系统（Job Schedule System）</p>
+<ul>
+<li>负责监控和管理集群中资源和作业的软件系统；</li>
+<li>通常由资源管理器、调度器、任务执行器，以及用户命令和API组成；</li>
+</ul>
+<h2 id="hpc">HPC集群<a class="headerlink" href="#hpc" title="Permanent link">&para;</a></h2>
+<p>一个大规模的超算，按照传统的 HPC style，根据功能不同，大概粗略分为几种不同的节点。</p>
+<ul>
+<li>
+<p>登陆节点</p>
+<p>和普通用户交互的主要节点。主要用来接受用户的 ssh 连接和文件传送，同时可以用来编译程序，修改代码和通过任务管理系统提交任务到计算节点。登陆节点还可细分为最外侧的负责 VPN 对接外网和入流量分流负载均衡的节点，以及普通的用来浏览文件编译程序提交任务的节点，和负责高带宽大文件传输的专用节点等。</p>
+</li>
+<li>
+<p>控制节点</p>
+<p>普通用户无法登陆，一般具有单独的管理网络，用于管理软件部署的节点。还可细分为提供资源管理软件，提供账户管理和网络服务等基础设施，提供数据库后端，提供监控软件后端，提供各种控制面板前端等不同功能的节点。分类越细，高可用就越好。每一种功能，还可以进一步包括主节点和备用从节点，从而防止单点故障。</p>
+</li>
+<li>
+<p>存储节点</p>
+<p>通过网络文件系统，如 Lustre，共享给登陆节点和计算节点使用。通常与这些节点通过高速互联网络，比如 InfiniBand 相连接，带给用户调用本地文件的速度。还可细分为存储元数据的节点，存储文件内容的节点，备份数据的节点等。</p>
+</li>
+<li>
+<p>计算节点</p>
+<p>用来进行计算任务的节点，占据了超算节点中的绝大多数。还可细分为不同硬件特性的计算节点。比如大内存节点用来解决内存瓶颈的问题，现在最大内存可达 S3T。又比如多 GPU 节点，用来进行机器学习等任务。还有具有本地固态硬盘的节点，用来满足需要高速 IO 的计算任务的需求等等。</p>
+</li>
+</ul>
+<p>对于小型的 HPC 集群，很多时候往往登陆节点，控制节点和存储节点的角色，都由同一台机器担任，同时整个系统也往往只具有一套网络。</p>
+<figure>
+<p><img alt="System" src="../assets/system.png" />
+  </p>
+<figcaption>System</figcaption>
+</figure>
+<figure>
+<p><img alt="System" src="../assets/hw.png" />
+  </p>
+<figcaption>Example Hardware</figcaption>
+</figure>
+<h2 id="nvidia-dgx-superpod">NVIDIA DGX SuperPOD<a class="headerlink" href="#nvidia-dgx-superpod" title="Permanent link">&para;</a></h2>
+<figure>
+<p><img alt="System" src="../assets/dgx_cluster.png" />
+  </p>
+<figcaption>Example deployment with depolyed software on each respective host System</figcaption>
+</figure>
+<h2 id="deepops">DeepOps<a class="headerlink" href="#deepops" title="Permanent link">&para;</a></h2>
+<figure>
+<p><img alt="Deepops workflow" src="../assets/deepops_workflow.png" />
+  </p>
+<figcaption>From a shiny new DGX POD</figcaption>
+</figure>
+<ul>
+<li>这个开源项目旨在简化在本地、可选择离线数据中心或云环境中部署多节点 GPU 集群的深度学习和高性能计算环境。</li>
+<li>DeepOps 也被认可为 DGX POD 管理软件。</li>
+<li>该项目的模块化性质还允许经验丰富的管理员挑选和选择可能有用的组件，使得该过程与他们现有的软件或基础架构兼容。</li>
+</ul>
+<figure>
+<p><img alt="Deepops" src="../assets/deepops.png" />
+  </p>
+<figcaption>DGX POD Management Software</figcaption>
+</figure>
+<figure>
+<p><img alt="Deepops" src="../assets/deepops_component.png" />
+  </p>
+<figcaption>DeepOps Components</figcaption>
+</figure>
+<p>GPU Compute node(s):</p>
+<ul>
+<li>For high-performance compute workloads</li>
+</ul>
+<p>Management node(s):</p>
+<ul>
+<li>Used for cluster management</li>
+</ul>
+<p>Provisioning node:</p>
+<ul>
+<li>Orchestrates the initial setup of the cluster</li>
+</ul>
+<h3 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h3>
+<figure class="inline end">
+<p><img alt="Architecture" src="../assets/architecture.png" />
+  </p>
+<figcaption>Building Multi-node GPU Clusters with DeepOps</figcaption>
+</figure>
+<ul>
+<li>1x CPU-only login node</li>
+<li>
+<p>Odd number of CPU-only management nodes</p>
+<ul>
+<li>required for etcd key-value store</li>
+</ul>
+</li>
+<li>
+<p>1/10Gb Ethernet control &amp; management networks</p>
+<ul>
+<li>Management, connectivity, command &amp; control</li>
+</ul>
+</li>
+<li>
+<p>Fully non-blocking fat-tree 100Gb EDR Infiniband topology</p>
+<ul>
+<li>Use the biggest EDR IB core switch that fits</li>
+</ul>
+</li>
+</ul>
+<h4 id="scheduler">Scheduler<a class="headerlink" href="#scheduler" title="Permanent link">&para;</a></h4>
+<p>调度系统是面向集群的操作系统。</p>
+<ul>
+<li>单一系统映像<ul>
+<li>解决集群结构松散问题；</li>
+<li>统一用户接口，使用简化；</li>
+</ul>
+</li>
+<li>系统资源整合<ul>
+<li>管理异构资源和异构系统；</li>
+</ul>
+</li>
+<li>多任务管理<ul>
+<li>统一管理任务，避免冲突；</li>
+</ul>
+</li>
+<li>资源访问控制<ul>
+<li>基于策略的资源访问控制；</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Kubernetes</th>
+<th>SLURM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic scheduling features</td>
+<td>Advanced scheduling features</td>
+</tr>
+<tr>
+<td>Share nodes, schedule jobs for GPUs on a node<br>(current best solution: Excel spreadsheet)</td>
+<td>Multi-node jobs<br>Job dependencies, workflows, DAGs<br>Advanced reservations<br>Intelligent scheduling (not just FIFO)</td>
+</tr>
+<tr>
+<td>Covers data permissions and security<br>(LDAP, file permissions)</td>
+<td>Other HPC-like scheduling functionality</td>
+</tr>
+<tr>
+<td>Adds analytics and monitoring<br>(important also for justification of purchase)</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<h5 id="kubernetes">Kubernetes<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h5>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Prepare Provisioning Node</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Prepare Management Nodes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Kubernetes Management Nodes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Basic Cluster Services</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Provision Compute Nodes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AAdditional Cluster Services </li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Kubernetes on Compute Nodes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Deploy Kubeflow</li>
+</ul>
+<p>提交一个 GPU-enabled 作业到GPU计算节点</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubeflow.org/v1alpha2</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MPIJob</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">metadata</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tensorflow-mpi-job</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">slotsPerWorker</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">mpiReplicaSpecs</span><span class="p">:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">Launcher</span><span class="p">:</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="nt">template</span><span class="p">:</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">          </span><span class="nt">containers</span><span class="p">:</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;nvcr.io/nvidia/tensorflow:21.03-tf1-py3&quot;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tensorflow-mpi-job-container</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">            </span><span class="nt">command</span><span class="p">:</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mpirun</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-np</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;4&quot;</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-bind-to</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-map-by</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slot</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-x</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NCCL_DEBUG=INFO</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-x</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LD_LIBRARY_PATH</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-x</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PATH</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-mca</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pml</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ob1</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-mca</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">btl</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^openib</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--allow-run-as-root</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/workspace/nvidia-examples/cnn/resnet.py</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--layers</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;50&quot;</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--batch_size</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;512&quot;</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">    </span><span class="nt">Worker</span><span class="p">:</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">      </span><span class="c1"># The number of workers (M)</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">      </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">      </span><span class="nt">template</span><span class="p">:</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">        </span><span class="nt">spec</span><span class="p">:</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">          </span><span class="nt">containers</span><span class="p">:</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;nvcr.io/nvidia/tensorflow:21.03-tf1-py3&quot;</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tensorflow-mpi-job-container</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">            </span><span class="nt">resources</span><span class="p">:</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">              </span><span class="nt">limits</span><span class="p">:</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">                </span><span class="c1"># The number of GPUs per-worker (N)</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">                </span><span class="nt">nvidia.com/gpu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</code></pre></div>
+<h4 id="slurm">Slurm<a class="headerlink" href="#slurm" title="Permanent link">&para;</a></h4>
+<figure class="inline end">
+<p><img alt="Architecture" src="../assets/slurm_components.png" />
+  </p>
+<figcaption>Slurm components</figcaption>
+</figure>
+<p>SLURM （Simple Linux Utility for Resource Management）是一种可扩展的工作负载管理器，已被全世界的国家超级计算机中心广泛采用。 它是免费且开源的，根据GPL通用公共许可证发行。</p>
+<h5 id="slurm_1">Slurm 概览<a class="headerlink" href="#slurm_1" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Slurm</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sinfo</td>
+<td>集群状态</td>
+</tr>
+<tr>
+<td>squeue</td>
+<td>排队作业状态</td>
+</tr>
+<tr>
+<td>sbatch</td>
+<td>作业提交</td>
+</tr>
+<tr>
+<td>scontrol</td>
+<td>查看和修改作业参数</td>
+</tr>
+<tr>
+<td>sacct</td>
+<td>已完成作业报告</td>
+</tr>
+<tr>
+<td>scancel</td>
+<td>删除作业</td>
+</tr>
+</tbody>
+</table>
+<h6 id="sinfo"><code>sinfo</code> 查看集群状态<a class="headerlink" href="#sinfo" title="Permanent link">&para;</a></h6>
+<table>
+<thead>
+<tr>
+<th>Slurm</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sinfo -N</code></td>
+<td>查看节点级信息</td>
+</tr>
+<tr>
+<td><code>sinfo -N --states=idle</code></td>
+<td>查看可用节点信息</td>
+</tr>
+<tr>
+<td><code>sinfo --partition=cpu</code></td>
+<td>查看队列信息</td>
+</tr>
+<tr>
+<td><code>sinfo --help</code></td>
+<td>查看所有选项</td>
+</tr>
+</tbody>
+</table>
+<p>节点状态包括：
+<code>drain</code> (节点故障)，<code>alloc</code>(节点在用)，<code>idle</code>(节点可用)，<code>down</code>(节点下线)，<code>mix</code> (节点部分占用，但仍有剩余资源）。</p>
+<h6 id="squeue"><code>squeue</code>查看作业信息<a class="headerlink" href="#squeue" title="Permanent link">&para;</a></h6>
+<table>
+<thead>
+<tr>
+<th>Slurm</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>squeue -j jobid</code></td>
+<td>查看作业信息</td>
+</tr>
+<tr>
+<td><code>squeue -l</code></td>
+<td>查看细节信息</td>
+</tr>
+<tr>
+<td><code>squeue -n HOST</code></td>
+<td>查看特定节点作业信息</td>
+</tr>
+<tr>
+<td><code>squeue</code></td>
+<td>查看USER_LIST的作业</td>
+</tr>
+<tr>
+<td><code>squeue --state=R</code></td>
+<td>查看特定状态的作业</td>
+</tr>
+<tr>
+<td><code>squeue --help</code></td>
+<td>查看所有的选项</td>
+</tr>
+<tr>
+<td><code>squeue -u &lt;username&gt;</code></td>
+<td>列出用户的所有当前作业</td>
+</tr>
+</tbody>
+</table>
+<p>作业状态包括<code>R</code>(正在运行)，<code>PD</code>(正在排队)，<code>CG</code>(即将完成)，<code>CD</code>(已完成)。</p>
+<p>默认情况下，squeue只会展示在排队或在运行的作业。
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>squeue
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>JOBID<span class="w"> </span>PARTITION<span class="w">     </span>NAME<span class="w">     </span>USER<span class="w"> </span>ST<span class="w">       </span>TIME<span class="w">  </span>NODES<span class="w"> </span>NODELIST<span class="o">(</span>REASON<span class="o">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="m">18046</span><span class="w">      </span>dgx2<span class="w">   </span>ZXLing<span class="w">     </span>eenl<span class="w">  </span>R<span class="w">    </span><span class="m">1</span>:35:53<span class="w">      </span><span class="m">1</span><span class="w"> </span>vol04
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="m">17796</span><span class="w">      </span>dgx2<span class="w">   </span>python<span class="w">    </span>eexdl<span class="w">  </span>R<span class="w"> </span><span class="m">3</span>-00:22:04<span class="w">      </span><span class="m">1</span><span class="w"> </span>vol02
+</code></pre></div></p>
+<h6 id="sbatch"><code>sbatch</code>作业提交<a class="headerlink" href="#sbatch" title="Permanent link">&para;</a></h6>
+<p>准备作业脚本然后通过sbatch提交是 Slurm 的最常见用法。 为了将作业脚本提交给作业系统，Slurm 使用</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>sbatch<span class="w"> </span>jobscript.slurm
+</code></pre></div>
+<p>Slurm 具有丰富的参数集。 以下最常用的。</p>
+<table>
+<thead>
+<tr>
+<th>Slurm</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-n [count]</code></td>
+<td>总进程数</td>
+</tr>
+<tr>
+<td><code>--ntasks-per-node=[count]</code></td>
+<td>每台节点上的进程数</td>
+</tr>
+<tr>
+<td><code>-p [partition]</code></td>
+<td>作业队列</td>
+</tr>
+<tr>
+<td><code>--job-name=[name]</code></td>
+<td>作业名</td>
+</tr>
+<tr>
+<td><code>--output=[file_name]</code></td>
+<td>标准输出文件</td>
+</tr>
+<tr>
+<td><code>--error=[file_name]</code></td>
+<td>标准错误文件</td>
+</tr>
+<tr>
+<td><code>--time=[dd-hh:mm:ss]</code></td>
+<td>作业最大运行时长</td>
+</tr>
+<tr>
+<td><code>--exclusive</code></td>
+<td>独占节点</td>
+</tr>
+<tr>
+<td><code>--mail-type=[type]</code></td>
+<td>通知类型，可选 all, fail, end，分别对应全通知、故障通知、结束通知</td>
+</tr>
+<tr>
+<td><code>--mail-user=[mail_address]</code></td>
+<td>通知邮箱</td>
+</tr>
+<tr>
+<td><code>--nodelist=[nodes]</code></td>
+<td>偏好的作业节点</td>
+</tr>
+<tr>
+<td><code>--exclude=[nodes]</code></td>
+<td>避免的作业节点</td>
+</tr>
+<tr>
+<td><code>--depend=[state:job_id]</code></td>
+<td>作业依赖</td>
+</tr>
+<tr>
+<td><code>--array=[array_spec]</code></td>
+<td>序列作业</td>
+</tr>
+</tbody>
+</table>
+<p>批处理作业脚本由四个主要组成部分组成：</p>
+<ul>
+<li>用于执行脚本的解释器</li>
+<li>"# "指令，用于传递默认提交选项。</li>
+<li>设置环境和/或脚本变量（如果需要的话）</li>
+<li>要执行的应用程序以及其输入参数和选项</li>
+</ul>
+<p>以下是一个示例作业脚本，它在“science”计费账户下向cpu队列请求8个节点，并在分配的8个节点上启动32个myApp任务，并在作业完成时通知：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1">#SBATCH -A science</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">#SBATCH --partition=cpu</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">#SBATCH -N 8 # 申请节点数为8,如果作业不能跨节点(MPI)运行, 申请的节点数应不超过1;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">#SBATCH -n 32</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">#SBATCH --mail-type=end</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1">#SBATCH --mail-user=YOU@EMAIL.COM</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1">#SBATCH --output=%j.out # 脚本执行的输出将被保存在当%j.out文件下，%j表示作业号;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1">#SBATCH --error=%j.err </span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1">#SBATCH --qos=low # 指定作业的QOS为low;</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1">#SBATCH -J myFirstJob   # 作业在调度系统中的作业名为myFirstJob;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="c1"># Set environment variables if necessary</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="c1"># Execute the application</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>myApp<span class="w"> </span><span class="o">[</span>arguments<span class="w"> </span>and<span class="w"> </span>options<span class="o">]</span>
+</code></pre></div>
+<p>假设上面作业脚本的文件名为<code>job.sh</code>，通过以下命令提交：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sbatch<span class="w"> </span>job.sh
+</code></pre></div>
+<p><code>squeue</code>可用于检查作业状态。用户可以在作业执行期间通过SSH登录到计算节点。输出将实时更新到文件<code>[jobid].out</code>和<code>[jobid].err</code>。</p>
+<p>这里展示一个更复杂的作业要求，其中将启动80个进程，每台主机40个进程。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1">#SBATCH --job-name=LINPACK</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1">#SBATCH --partition=cpu # 作业提交的指定分区为cpu</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1">#SBATCH -n 80</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1">#SBATCH --ntasks-per-node=40 # 每个节点上运行40个任务，--ntasks参数的优先级高于该参数，默认一情况下也可理解为每个节点使用一个核心，如果程序不支持多线程(如openmp)，这个数不应该超过1;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1">#SBATCH --mail-type=end</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1">#SBATCH --mail-user=YOU@EMAIL.COM</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1">#SBATCH --output=%j.out</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1">#SBATCH --error=%j.err</span>
+</code></pre></div>
+<p>以下作业请求4张GPU卡，其中1个CPU进程管理1张GPU卡。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">#SBATCH --job-name=GPU_HPL</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">#SBATCH --partition=dgx2  # 作业提交的指定分区为dgx2;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1">#SBATCH -n 4</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1">#SBATCH --ntasks-per-node=4</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1">#SBATCH --gres=gpu:4 # 每个节点上申请4块GPU卡</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="c1">#SBATCH --mail-type=end</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1">#SBATCH --mail-user=YOU@MAIL.COM</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="c1">#SBATCH --output=%j.out</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="c1">#SBATCH --error=%j.err</span>
+</code></pre></div>
+<p>以下作业启动一个3任务序列（从0到2），每个任务需要1个CPU内核。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1">#SBATCH --job-name=python_array</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1">#SBATCH --mail-user=YOU@MAIL.COM</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1">#SBATCH --mail-type=ALL</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1">#SBATCH --ntasks=1</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1">#SBATCH --time=00:30:00</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="c1">#SBATCH --array=0-2</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="c1">#SBATCH --output=python_array_%A_%a.out</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="c1">#SBATCH --output=python_array_%A_%a.err</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>module<span class="w"> </span>load<span class="w"> </span>miniconda2/4.6.14-gcc-4.8.5
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>YOUR_ENV_NAME
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SLURM_JOBID: &quot;</span><span class="w"> </span><span class="nv">$SLURM_JOBID</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SLURM_ARRAY_TASK_ID: &quot;</span><span class="w"> </span><span class="nv">$SLURM_ARRAY_TASK_ID</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SLURM_ARRAY_JOB_ID: &quot;</span><span class="w"> </span><span class="nv">$SLURM_ARRAY_JOB_ID</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>python<span class="w"> </span>&lt;<span class="w"> </span>vec_<span class="si">${</span><span class="nv">SLURM_ARRAY_TASK_ID</span><span class="si">}</span>.py
+</code></pre></div>
+<h6 id="srun-salloc"><code>srun</code> 和 <code>salloc</code> 交互式作业<a class="headerlink" href="#srun-salloc" title="Permanent link">&para;</a></h6>
+<p><code>srun</code> 可以启动交互式作业。该操作将阻塞，直到完成或终止。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$<span class="w"> </span>srun<span class="w"> </span>-N<span class="w"> </span><span class="m">1</span><span class="w"> </span>-n<span class="w"> </span><span class="m">4</span><span class="w"> </span>-p<span class="w"> </span>small<span class="w"> </span>hostname
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>cas006
+</code></pre></div>
+<p>启动远程主机bash终端：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>srun<span class="w"> </span>-p<span class="w"> </span>small<span class="w"> </span>-n<span class="w"> </span><span class="m">4</span><span class="w"> </span>--exclusive<span class="w"> </span>--pty<span class="w"> </span>/bin/bash
+</code></pre></div>
+<p>或者，可以通过salloc请求资源，然后在获取节点后登录到计算节点：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>salloc<span class="w"> </span>-N<span class="w"> </span><span class="m">1</span><span class="w"> </span>-n<span class="w"> </span><span class="m">4</span><span class="w"> </span>-p<span class="w"> </span>small
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>ssh<span class="w"> </span>casxxx
+</code></pre></div>
+<h6 id="scontrol"><code>scontrol</code>: 查看和修改作业参数<a class="headerlink" href="#scontrol" title="Permanent link">&para;</a></h6>
+<table>
+<thead>
+<tr>
+<th>Slurm</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scontrol show job JOB_ID</code></td>
+<td>查看排队或正在运行的作业的信息</td>
+</tr>
+<tr>
+<td><code>scontrol hold JOB_ID</code></td>
+<td>暂停JOB_ID</td>
+</tr>
+<tr>
+<td><code>scontrol release JOB_ID</code></td>
+<td>恢复JOB_ID</td>
+</tr>
+<tr>
+<td><code>scontrol update dependency=JOB_ID</code></td>
+<td>添加作业依赖性 ，以便仅在JOB_ID完成后才开始作业</td>
+</tr>
+</tbody>
+</table>
+<p><code>scontrol hold</code> 命令可使排队中尚未运行的作业暂停被分配运行，被挂起的作业将不被执行。<code>scontrol release</code> 命令可取消挂起。</p>
+<h6 id="sacct"><code>sacct</code>查看作业记录<a class="headerlink" href="#sacct" title="Permanent link">&para;</a></h6>
+<table>
+<thead>
+<tr>
+<th>Slurm</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sacct -l</code></td>
+<td>查看详细的帐户作业信息</td>
+</tr>
+<tr>
+<td><code>sacct --states=R</code></td>
+<td>查看具有特定状态的作业的帐号作业信息</td>
+</tr>
+<tr>
+<td><code>sacct -S YYYY-MM-DD</code></td>
+<td>在指定时间后选择处于任意状态的作业</td>
+</tr>
+<tr>
+<td><code>sacct --format=“LAYOUT”</code></td>
+<td>使用给定的LAYOUT自定义sacct输出</td>
+</tr>
+<tr>
+<td><code>sacct --help</code></td>
+<td>查看所有选项</td>
+</tr>
+</tbody>
+</table>
+<p>默认情况下，<code>sacct</code>显示过去<strong>24小时</strong>的帐号作业信息。</p>
+<p><code>scontrol show job</code> 只能显示正在运行或者刚结束没多久的作业信息；通过<code>sacct</code>查询已经结束作业的相关信息。</p>
+<h5 id="slurm_2">Slurm环境变量<a class="headerlink" href="#slurm_2" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SLURM_JOB_ID</code></td>
+<td>作业ID</td>
+</tr>
+<tr>
+<td><code>SLURM_JOB_NAME</code></td>
+<td>作业名称</td>
+</tr>
+<tr>
+<td><code>SLURM_JOB_PARTITION</code></td>
+<td>队列名称</td>
+</tr>
+<tr>
+<td><code>SLURM_NTASKS</code></td>
+<td>进程总数</td>
+</tr>
+<tr>
+<td><code>SLURM_NTASKS_PER_NODE</code></td>
+<td>每个节点请求的任务数</td>
+</tr>
+<tr>
+<td><code>SLURM_JOB_NUM_NODES</code></td>
+<td>节点数</td>
+</tr>
+<tr>
+<td><code>SLURM_JOB_NODELIST</code></td>
+<td>节点列表</td>
+</tr>
+<tr>
+<td><code>SLURM_LOCALID</code></td>
+<td>作业中进程的节点本地任务ID</td>
+</tr>
+<tr>
+<td><code>SLURM_ARRAY_TASK_ID</code></td>
+<td>作业序列中的任务ID</td>
+</tr>
+<tr>
+<td><code>SLURM_SUBMIT_DIR</code></td>
+<td>工作目录</td>
+</tr>
+<tr>
+<td><code>SLURM_SUBMIT_HOST</code></td>
+<td>提交作业的主机名</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ansible">Ansible<a class="headerlink" href="#ansible" title="Permanent link">&para;</a></h3>
+<p>Ansible 是一款来自 Red Hat 的配置管理工具，正在迅速成DevOps 风格系统管理的标准工具。Ansible 提供了一种声明性的管理硬件和软件的方法，管理员可以使用一组易于阅读的 YAML 文件指定配置的预期状态。这使得基础架构的状态可以像任何其他软件代码一样通过版本控制和变更验证流程进行管理。</p>
+<p>Ansible 使用名为 "角色（Roles）" 的概念，提供一组标准任务，可以通过更改一些变量在多次执行或多个设备上执行。</p>
+<p>例如在下图创建三个独立的角色：一个用于 A800 存储设备，一个用于Nexus 交换机的网络设备，以及一个用于 DGX-1 服务器。每个角色包含特定设备的任务，以及完成配置所需的默认变量或其他文件。</p>
+<figure>
+<p><img alt="System" src="../assets/ontap-ai.png" />
+  </p>
+<figcaption>ONTAP AI solution verified architecture</figcaption>
+</figure>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2023年5月19日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+
+  
+    <div class="md-source-date">
+      <small>
+          Author: <span class='git-page-authors git-authors'><a href='mailto:allenplato28@gmail.com'>Chufan Chen</a></span>
+      </small>
+    </div>
+  
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+    
+  </body>
+</html>
