@@ -153,7 +153,7 @@ Provisioning node:
 - [ ] Kubernetes on Compute Nodes
 - [ ] Deploy Kubeflow
 
-Submit a GPU-enabled job to the GPU compute node(s)
+提交一个 GPU-enabled 作业到GPU计算节点
 
 ```yaml
 apiVersion: kubeflow.org/v1alpha2
@@ -452,7 +452,8 @@ Ansible 是一款来自 Red Hat 的配置管理工具，正在迅速成DevOps �
 
 Ansible 使用名为 "角色（Roles）" 的概念，提供一组标准任务，可以通过更改一些变量在多次执行或多个设备上执行。
 
-为了演示这一点，我创建了三个独立的角色：一个用于 A800 存储设备，一个用于Nexus 交换机的网络设备，以及一个用于 DGX-1 服务器。每个角色包含特定设备的任务，以及完成配置所需的默认变量或其他文件。
+
+例如在下图创建三个独立的角色：一个用于 A800 存储设备，一个用于Nexus 交换机的网络设备，以及一个用于 DGX-1 服务器。每个角色包含特定设备的任务，以及完成配置所需的默认变量或其他文件。
 
 <figure markdown>
   ![System](assets/ontap-ai.png)
