@@ -57,3 +57,28 @@ cpu 队列 slurm 脚本示例 array
 echo $SLURM_ARRAY_TASK_ID
 ```
 
+## 作业依赖关联
+
+提交作业时可以指定作业之间的依赖关系，通过各种逻辑关系的设置来完成一个复杂的业务处理流程。
+常用的逻辑关系包括：
+`after`（依赖作业开始运行时）
+`afterok`（依赖作业正常结束时）
+`afterany`（依赖作业均完成）
+`afternotok`（依赖作业非正常结束）
+
+一个流水线应该包括以下内容：
+
+- 准备阶段：job_prep.sh
+- 两个工作任务（job01.sh 和 job02.sh）
+- 如果成功：一个收集任务（job_coll.sh）
+- 否则：一个处理错误的任务（job_handle_err.sh）
+
+下面的脚本将根据它们的依赖关系提交这三个任务。
+
+```bash
+jid_pre=$(sbatch --parsable job_prep.sh)
+jid_w01=$(sbatch --parsable --dependency=afterok:${jid_pre} job01.sh)
+jid_w02=$(sbatch --parsable --dependency=afterok:${jid_pre} job02.sh)
+sbatch --dependency=afterok:${jid_w01}:${jid_w02} job_coll.sh
+sbatch --dependency=afternotok:${jid_w01}:${jid_w02} job_handle_err.sh
+```

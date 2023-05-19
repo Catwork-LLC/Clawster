@@ -9,6 +9,8 @@ nav:
   - Home: index.md
   - System: system.md
   - Jobs: jobs.md
+  - Container: container.md
+  - Module: module.md
   - Slurm operations: slurm_operations.md
   - Slurm installation: slurm_installation.md
 
@@ -79,6 +81,8 @@ plugins:
         zh:
           Jobs: 作业
           System: 系统
+          Container: 容器
+          Module: 软件模块
   - git-revision-date-localized:
       fallback_to_build_date: true
 

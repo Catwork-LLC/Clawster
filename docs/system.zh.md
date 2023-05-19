@@ -1,5 +1,37 @@
 # 系统
 
+## 基本概念
+
+资源
+
+- 作业运行过程中使用的可量化实体都是资源
+- 包括硬件资源（节点、内存、CPU 、GPU等）和软件资源（ License ）
+
+集群
+
+- 包含计算、存储、网络等各种资源实体且彼此联系的资源集合；
+- 在物理上，一般由计算处理、互联通信、I/O 存储、操作系统、编译器、
+运行环境、开发工具等多个软硬件子系统组成；
+- 节点是集群的基本组成单位，从角色上一般可以划分为管理节点、登陆节
+点、计算节点、存储节点等。
+
+作业
+
+- 物理构成，一组关联的资源分配请求，以及一组关联的处理过程；
+- 交互方式，可以分为交互式作业和非交互式作业；
+- 资源使用，可以分为串行作业和并行作业；
+
+分区
+
+- 带名称的作业容器；
+- 用户访问控制；
+- 资源使用限制；
+
+作业调度系统（Job Schedule System）
+
+- 负责监控和管理集群中资源和作业的软件系统；
+- 通常由资源管理器、调度器、任务执行器，以及用户命令和API组成；
+
 ## HPC集群
 
 传统的HPC集群有文件系统和计算系统。
@@ -7,9 +39,15 @@
 文件系统（File System）是集群中负责管理和存储文件信息的软件架构，用于向用户提供底层数据访问。
 
 计算系统（Computing System）是集群中负责提供计算资源、执行计算操作的节点集合。
+
 <figure markdown>
   ![System](assets/system.png)
   <figcaption>System</figcaption>
+</figure>
+
+<figure markdown>
+  ![System](assets/hw.png)
+  <figcaption>Example Hardware</figcaption>
 </figure>
 
 ## NVIDIA DGX SuperPOD
@@ -70,6 +108,18 @@ Provisioning node:
     - Use the biggest EDR IB core switch that fits
 
 #### Scheduler
+
+调度系统是面向集群的操作系统。
+
+- 单一系统映像
+    - 解决集群结构松散问题；
+    - 统一用户接口，使用简化；
+- 系统资源整合
+    - 管理异构资源和异构系统；
+- 多任务管理
+    - 统一管理任务，避免冲突；
+- 资源访问控制
+    - 基于策略的资源访问控制；
 
 | Kubernetes  | SLURM                                |
 | ----------- | ------------------------------------ |
@@ -201,7 +251,7 @@ JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 17796      dgx2   python    eexdl  R 3-00:22:04      1 vol02
 ```
 
-##### `sbatch`作业提交
+###### `sbatch`作业提交
 准备作业脚本然后通过sbatch提交是 Slurm 的最常见用法。 为了将作业脚本提交给作业系统，Slurm 使用
 
 ```bash
@@ -319,11 +369,29 @@ echo "SLURM_ARRAY_JOB_ID: " $SLURM_ARRAY_JOB_ID
 python < vec_${SLURM_ARRAY_TASK_ID}.py
 ```
 
-##### `srun` 和 `salloc` 交互式作业
+###### `srun` 和 `salloc` 交互式作业
 
 `srun` 可以启动交互式作业。该操作将阻塞，直到完成或终止。
 
-##### `scontrol`: 查看和修改作业参数
+```bash
+$ srun -N 1 -n 4 -p small hostname
+cas006
+```
+
+启动远程主机bash终端：
+
+```bash
+srun -p small -n 4 --exclusive --pty /bin/bash
+```
+
+或者，可以通过salloc请求资源，然后在获取节点后登录到计算节点：
+
+```bash
+salloc -N 1 -n 4 -p small
+ssh casxxx
+```
+
+###### `scontrol`: 查看和修改作业参数
 
 | Slurm                          | 功能                                     |
 |--------------------------------|------------------------------------------|
@@ -334,7 +402,7 @@ python < vec_${SLURM_ARRAY_TASK_ID}.py
 
 `scontrol hold` 命令可使排队中尚未运行的作业暂停被分配运行，被挂起的作业将不被执行。`scontrol release` 命令可取消挂起。
 
-##### `sacct`查看作业记录
+###### `sacct`查看作业记录
 
 | Slurm                       | 功能                                    |
 |-------------------------------|-----------------------------------------|
